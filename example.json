@@ -1,0 +1,232 @@
+{
+  "books": [
+    {
+      "id": "b1",
+      "catalogId": "b1",
+      "title": "Dom Casmurro",
+      "authors": [
+        { "name": "Machado de Assis", "role": "author" }
+      ],
+      "identifiers": {
+        "isbn10": null,
+        "isbn13": "9780000000002",
+        "asin": null,
+        "goodreads": null,
+        "storygraph": null,
+        "hardcover": null,
+        "pagebound": null,
+        "fable": null
+      },
+      "format": "paperback",
+      "language": "pt",
+      "pageCount": 256,
+      "durationSeconds": null,
+      "medium": { "audio": false, "digital": false },
+      "provenance": {
+        "catalog": null,
+        "format": null,
+        "publisher": null,
+        "publishedYear": null,
+        "pageCount": null,
+        "audioDuration": null
+      },
+      "publisher": null,
+      "publishedYear": null,
+      "originalPublicationYear": 1899,
+      "series": null
+    },
+    {
+      "id": "b2",
+      "catalogId": "b2",
+      "title": "Grande Sertão: Veredas",
+      "authors": [
+        { "name": "João Guimarães Rosa", "role": "author" }
+      ],
+      "identifiers": {
+        "isbn10": null,
+        "isbn13": "9780000000019",
+        "asin": null,
+        "goodreads": null,
+        "storygraph": null,
+        "hardcover": null,
+        "pagebound": null,
+        "fable": null
+      },
+      "format": "ebook",
+      "language": "pt",
+      "pageCount": 624,
+      "durationSeconds": null,
+      "medium": { "audio": false, "digital": true },
+      "provenance": {
+        "catalog": null,
+        "format": null,
+        "publisher": null,
+        "publishedYear": null,
+        "pageCount": null,
+        "audioDuration": null
+      },
+      "publisher": null,
+      "publishedYear": null,
+      "originalPublicationYear": 1956,
+      "series": null
+    }
+  ],
+  "shelves": [
+    { "id": "sh1", "name": "Currently Reading", "slug": "currently-reading", "isDefault": 1, "position": 0, "icon": null, "createdAt": "2024-05-02T09:58:00Z" },
+    { "id": "sh2", "name": "Want to Read", "slug": "want-to-read", "isDefault": 1, "position": 1, "icon": null, "createdAt": "2024-05-02T09:58:00Z" },
+    { "id": "sh3", "name": "Completed", "slug": "completed", "isDefault": 1, "position": 2, "icon": null, "createdAt": "2024-05-02T09:58:00Z" },
+    { "id": "sh4", "name": "Set Aside", "slug": "set-aside", "isDefault": 1, "position": 3, "icon": null, "createdAt": "2024-05-02T09:58:00Z" }
+  ],
+  "entries": [
+    {
+      "id": "e1",
+      "bookId": "b1",
+      "shelfId": "sh1",
+      "currentAttemptId": "a2",
+      "addedAt": "2024-05-02T10:00:00Z",
+      "progressPercent": 42,
+      "finishedAt": null,
+      "finishedSource": null,
+      "completionOverride": null,
+      "origin": "goodreads-import",
+      "rating": { "scale": 5, "value": 4.5, "source": "manual" },
+      "review": {
+        "text": "Bento tells his own story, so can we trust him? I still cannot decide.",
+        "source": null,
+        "spoiler": false,
+        "updatedAt": "2019-03-15T09:15:00Z"
+      },
+      "ratedAt": "2019-03-15T09:12:00Z",
+      "deletedAt": null,
+      "mergedAt": null
+    },
+    {
+      "id": "e2",
+      "bookId": "b2",
+      "shelfId": "sh2",
+      "currentAttemptId": null,
+      "addedAt": "2024-05-02T10:00:00Z",
+      "progressPercent": 0,
+      "finishedAt": null,
+      "finishedSource": null,
+      "completionOverride": null,
+      "origin": "goodreads-import",
+      "rating": null,
+      "review": null,
+      "ratedAt": null,
+      "deletedAt": null,
+      "mergedAt": null
+    }
+  ],
+  "attempts": [
+    {
+      "id": "a1",
+      "entryId": "e1",
+      "sequence": 1,
+      "status": "completed",
+      "startedAt": null,
+      "finishedAt": "2019-03-14",
+      "startedSource": null,
+      "finishedSource": "import_history",
+      "startPercent": 0,
+      "currentPercent": 100,
+      "createdAt": "2024-05-02T10:00:00Z",
+      "updatedAt": "2024-05-02T10:00:00Z",
+      "deletedAt": null
+    },
+    {
+      "id": "a2",
+      "entryId": "e1",
+      "sequence": 2,
+      "status": "active",
+      "startedAt": "2026-11-02T21:15:00Z",
+      "finishedAt": null,
+      "startedSource": null,
+      "finishedSource": null,
+      "startPercent": 0,
+      "currentPercent": 42,
+      "createdAt": "2026-11-02T21:15:00Z",
+      "updatedAt": "2026-11-10T21:40:00Z",
+      "deletedAt": null
+    }
+  ],
+  "progress": [
+    {
+      "id": "p1",
+      "entryId": "e1",
+      "attemptId": "a1",
+      "percent": 100,
+      "recordedAt": "2019-03-14",
+      "syncAt": "2024-05-02T10:00:00Z",
+      "source": "import_history",
+      "pagePosition": null,
+      "measuredPageCount": null,
+      "audioPositionSeconds": null,
+      "playbackSpeed": null
+    },
+    {
+      "id": "p2",
+      "entryId": "e1",
+      "attemptId": "a2",
+      "percent": 0,
+      "recordedAt": "2026-11-02T21:15:00Z",
+      "syncAt": "2026-11-02T21:15:00Z",
+      "source": "reread_baseline",
+      "pagePosition": null,
+      "measuredPageCount": null,
+      "audioPositionSeconds": null,
+      "playbackSpeed": null
+    },
+    {
+      "id": "p3",
+      "entryId": "e1",
+      "attemptId": "a2",
+      "percent": 18,
+      "recordedAt": "2026-11-05T22:30:00Z",
+      "syncAt": "2026-11-05T22:30:01Z",
+      "source": "manual",
+      "pagePosition": 46,
+      "measuredPageCount": 256,
+      "audioPositionSeconds": null,
+      "playbackSpeed": null
+    },
+    {
+      "id": "p4",
+      "entryId": "e1",
+      "attemptId": "a2",
+      "percent": 42,
+      "recordedAt": "2026-11-10T21:40:00Z",
+      "syncAt": "2026-11-10T21:40:02Z",
+      "source": "manual",
+      "pagePosition": 107,
+      "measuredPageCount": 256,
+      "audioPositionSeconds": null,
+      "playbackSpeed": null
+    }
+  ],
+  "notes": [
+    {
+      "id": "n1",
+      "kind": "note",
+      "body": "Capitu's eyes again. The scene reads differently the second time.",
+      "createdAt": "2026-11-10T21:41:00Z",
+      "updatedAt": "2026-11-10T21:41:00Z",
+      "progressSnapshotId": "p4"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "x1",
+      "entryId": "e1",
+      "attemptId": "a2",
+      "startedAt": "2026-11-10T20:45:00Z",
+      "endedAt": "2026-11-10T21:40:00Z",
+      "durationSeconds": 3000,
+      "startPage": 46,
+      "endPage": 107,
+      "pagesRead": 61,
+      "source": "koreader_import",
+      "createdAt": "2026-11-10T21:41:00Z"
+    }
+  ]
+}

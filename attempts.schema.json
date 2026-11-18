@@ -1,0 +1,189 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "entryId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "active",
+        "completed",
+        "stopped"
+      ]
+    },
+    "startedAt": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "finishedAt": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "startedSource": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 1000000
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "finishedSource": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 1000000
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "startPercent": {
+      "anyOf": [
+        {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "currentPercent": {
+      "anyOf": [
+        {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "createdAt": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "updatedAt": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deletedAt": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "entryId",
+    "sequence",
+    "status",
+    "startedAt",
+    "finishedAt",
+    "startedSource",
+    "finishedSource",
+    "startPercent",
+    "currentPercent",
+    "createdAt",
+    "updatedAt",
+    "deletedAt"
+  ]
+}

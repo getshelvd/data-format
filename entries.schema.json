@@ -1,0 +1,314 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "bookId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "shelfId": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "currentAttemptId": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "addedAt": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "progressPercent": {
+      "anyOf": [
+        {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "finishedAt": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "finishedSource": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 1000000
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "completionOverride": {
+      "anyOf": [
+        {
+          "enum": [
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "origin": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 1000000
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "rating": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "scale": {
+              "const": 5
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 5
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "source": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 1000000
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "scale",
+            "value",
+            "source"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "review": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "text": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 1000000
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "source": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 1000000
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "spoiler": {
+              "type": "boolean"
+            },
+            "updatedAt": {
+              "anyOf": [
+                {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "date-time",
+                      "pattern": "Z$"
+                    },
+                    {
+                      "type": "string",
+                      "format": "date"
+                    }
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "source",
+            "spoiler",
+            "updatedAt"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "ratedAt": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deletedAt": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "mergedAt": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "bookId",
+    "shelfId",
+    "currentAttemptId",
+    "addedAt",
+    "progressPercent",
+    "finishedAt",
+    "finishedSource",
+    "completionOverride",
+    "origin",
+    "rating",
+    "review",
+    "ratedAt",
+    "deletedAt",
+    "mergedAt"
+  ]
+}

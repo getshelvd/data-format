@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "kind",
+    "body",
+    "createdAt",
+    "updatedAt",
+    "progressSnapshotId"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "kind": {
+      "type": "string",
+      "maxLength": 1000000
+    },
+    "body": {
+      "type": "string",
+      "maxLength": 1000000
+    },
+    "createdAt": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "updatedAt": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "progressSnapshotId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    }
+  }
+}
